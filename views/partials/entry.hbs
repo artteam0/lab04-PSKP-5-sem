@@ -1,0 +1,7 @@
+<div class="entry">
+    {{#if @root.disabled}}
+        <span class="btn-str locked">{{name}} {{phone}}</span>
+    {{else}}
+        <a href="/Update?id={{id}}" class="btn-str">{{name}} {{phone}}</a>
+    {{/if}}
+</div>

@@ -1,0 +1,20 @@
+<div class="list-container">
+    {{#each items}}
+        {{> entry}}
+    {{/each}}
+</div>
+
+<form method="POST">
+    <input type="hidden" name="id" value="{{item.id}}">
+    
+    <div class="input-row">
+        <input type="text" name="name" id="nameInput" value="{{item.name}}" oninput="checkInput(this)" required>
+        <input type="text" name="phone" value="{{item.phone}}" required>
+    </div>
+
+    <div class="button-group">
+        <button type="submit" formaction="/Update">Изменить</button>
+        <button type="submit" formaction="/Delete" id="deleteBtn">Удалить</button>
+        {{{rejectBtn}}}
+    </div>
+</form>
