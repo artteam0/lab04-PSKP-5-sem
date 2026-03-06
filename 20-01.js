@@ -48,6 +48,12 @@ app.post('/Delete', (req, res) => {
     res.redirect('/');
 });
 
+app.get('/debug-json', (req, res) => {
+    const data = fs.readFileSync(DB_FILE, 'utf8');
+    res.header("Content-Type", "application/json");
+    res.send(data);
+});
+
 //app.listen(3000);
 
 const PORT = process.env.PORT || 3000;
