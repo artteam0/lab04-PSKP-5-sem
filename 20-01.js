@@ -49,7 +49,7 @@ app.post('/Delete', (req, res) => {
 });
 
 app.get('/debug-json', (req, res) => {
-    const data = fs.readFileSync(DB_FILE, 'utf8');
+    const data = fs.readFileSync(DATA_PATH, 'utf8');
     res.header("Content-Type", "application/json");
     res.send(data);
 });
